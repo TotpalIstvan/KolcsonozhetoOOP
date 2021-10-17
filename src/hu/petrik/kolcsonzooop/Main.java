@@ -1,6 +1,7 @@
 package hu.petrik.kolcsonzooop;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -38,9 +39,26 @@ public class Main {
         katalogus.add(u2);
         katalogus.add(u3);
 
-        for (Kolcsonozheto kolcsonozheto: katalogus
-             ) {
+        for (Kolcsonozheto kolcsonozheto: katalogus) {
             System.out.println(kolcsonozheto.megjelenitendoNev() + " "+ kolcsonozheto.meddigKolcsonozheto() + " nap");
+        }
+
+        List<Dvd> dvdk = new ArrayList<>();
+        dvdk.add(d1);
+        dvdk.add(d2);
+        dvdk.add(d3);
+        dvdk.add(d4);
+        dvdk.add(d5);
+        System.out.println();
+
+        for (Dvd dvd: dvdk) {
+            System.out.println(dvd.megjelenitendoNev());
+        }
+        System.out.println();
+        Collections.sort(dvdk);
+
+        for (Dvd dvd: dvdk) {
+            System.out.println(dvd.megjelenitendoNev());
         }
     }
 }
